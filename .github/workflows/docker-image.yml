@@ -22,7 +22,7 @@ jobs:
         run: |
           echo "url: ${{ secrets.UPTYCS_PROTECTU_CI_HOST_NAME_VULNERS }}, image_id: ${{ env.image_scan_id }}"
       - name: Run Uptycs Vulnerability Scanner Expected to Failed
-        uses: uptycslabs/uptycs-action@main
+        uses: Uptycs/protectu-ci@main
         with:
           uptycs-secret: ${{ secrets.UPTYCS_PROTECTU_CI_SECRET_VULNERS }}
           hostname: ${{ secrets.UPTYCS_PROTECTU_CI_HOST_NAME_VULNERS }}
