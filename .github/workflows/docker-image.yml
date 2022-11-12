@@ -20,10 +20,10 @@ jobs:
       - name: Debug
         id: print
         run: |
-          echo "url: ${{ secrets.UPTYCS_CI_HOST_NAME_VULNERS }}, image_id: ${{ env.image_scan_id }}"
+          echo "url: ${{ secrets.UPTYCS_PROTECTU_CI_HOST_NAME_VULNERS }}, image_id: ${{ env.image_scan_id }}"
       - name: Run Uptycs Vulnerability Scanner Expected to Failed
         uses: uptycslabs/uptycs-action@main
         with:
-          uptycs-secret: ${{ secrets.UPTYCS_CI_SECRET_VULNERS }}
-          hostname: ${{ secrets.UPTYCS_CI_HOST_NAME_VULNERS }}
+          uptycs-secret: ${{ secrets.UPTYCS_PROTECTU_CI_SECRET_VULNERS }}
+          hostname: ${{ secrets.UPTYCS_PROTECTU_CI_HOST_NAME_VULNERS }}
           image-id: ${{ env.image_scan_id }}
